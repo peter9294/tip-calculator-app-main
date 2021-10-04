@@ -1,0 +1,275 @@
+:root {
+  /* primary */
+  --strong-cyan: hsl(172, 67%, 45%);
+  /* neutral */
+  --Very-dark-cyan: hsl(183, 100%, 15%);
+  --Darker-grayish-cyan: hsl(186, 14%, 43%);
+  --Dark-grayish-cyan: hsl(184, 14%, 56%);
+  --Light-grayish-cyan: hsl(185, 41%, 84%);
+  --Lighter-grayish-cyan: hsl(189, 41%, 97%);
+}
+
+body {
+  font-family: "Space Mono", monospace;
+  font-size: 24px;
+  background-color: var(--Light-grayish-cyan);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+main {
+  background-color: white;
+  border-radius: 20px;
+  width: 600px;
+  height: 300px;
+  display: flex;
+  transition: 0.1s;
+}
+
+h1 {
+  font-size: 18px;
+  letter-spacing: 7px;
+  color: var(--Darker-grayish-cyan);
+  margin-bottom: 20px;
+}
+
+h2 {
+  font-size: 12px;
+  font-weight: 400;
+  margin-bottom: 0;
+}
+
+p {
+  font-size: 10px;
+}
+
+label {
+  position: relative;
+  height: 20px;
+}
+
+button,
+input[type="number"] {
+  font-family: "Space Mono", monospace;
+  font-weight: 900;
+}
+
+/* input  */
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+input:focus {
+  outline: none;
+}
+
+.input-long {
+  background-color: var(--Light-grayish-cyan);
+  border: none;
+  width: 226px;
+  height: 25px;
+  margin: 0;
+  padding-right: 10px;
+  border-radius: 4px;
+}
+
+.input-long:focus {
+  border: solid 2px var(--strong-cyan);
+}
+
+.red-alert:focus {
+  border: solid 2px red;
+}
+
+/* First part */
+
+.dollar:before {
+  content: "";
+  position: absolute;
+  left: 10px;
+  top: 6px;
+  bottom: 0;
+  width: 10px;
+  background: url(images/icon-dollar.svg) center / contain no-repeat;
+}
+
+.left-top-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  gap: 15px;
+  width: 300px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  margin-left: 20px;
+}
+
+.tip-btn {
+  background-color: var(--Very-dark-cyan);
+  border: none;
+  border-radius: 4px;
+  color: white;
+  height: 30px;
+  width: 70px;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.tip-btn:hover {
+  background-color: var(--Light-grayish-cyan);
+  color: var(--Very-dark-cyan);
+}
+
+.tip-btn:active {
+  background-color: var(--strong-cyan);
+}
+
+.active-btn {
+  background-color: var(--strong-cyan);
+  border: none;
+  border-radius: 4px;
+  color: white;
+  height: 30px;
+  width: 70px;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.tip-custom {
+  background-color: var(--Light-grayish-cyan);
+  border: none;
+  border-radius: 4px;
+  width: 65px;
+  height: 27px;
+  text-align: center;
+}
+.tip-custom:focus {
+  border: solid 2px var(--strong-cyan);
+}
+
+.person:before {
+  content: "";
+  position: absolute;
+  left: 10px;
+  top: 10px;
+  bottom: 0px;
+  width: 10px;
+  background: url(images/icon-person.svg) center / contain no-repeat;
+}
+
+#cant-be-zero {
+  margin-left: 35px;
+  color: red;
+  font-size: 10px;
+}
+
+/* Second part  */
+.tip-calculating-container {
+  background-color: var(--Very-dark-cyan);
+  border-radius: 20px;
+  width: 300px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  margin-right: 20px;
+  text-align: center;
+  padding-top: 20px;
+}
+.tip-calculating-container h2 {
+  color: white;
+  margin: 0px;
+  margin-bottom: 5px;
+  text-align: left;
+}
+.tip-calculating-container p {
+  color: var(--Dark-grayish-cyan);
+}
+.tip-calculating-container span {
+  color: var(--strong-cyan);
+  font-size: 30px;
+  font-weight: 900;
+}
+
+.amount-container {
+  display: flex;
+  justify-content: space-between;
+  margin: 20px 20px;
+}
+
+.amount-container p {
+  margin: 0;
+  text-align: left;
+}
+
+.reset-btn {
+  position: relative;
+  background-color: var(--strong-cyan);
+  border: none;
+  border-radius: 5px;
+  color: var(--Very-dark-cyan);
+  width: 230px;
+  height: 30px;
+  top: 30px;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.reset-btn:hover {
+  background-color: var(--Light-grayish-cyan);
+}
+.reset-btn:active {
+  background-color: var(--strong-cyan);
+}
+
+/* mobile  */
+
+@media (max-width: 600px) {
+  main {
+    flex-direction: column;
+    align-items: center;
+    width: 280px;
+    height: 590px;
+  }
+
+  .left-top-container {
+    width: auto;
+  }
+
+  .btn-activable {
+    width: 1px;
+  }
+
+  /* Second part (mobile)  */
+  .tip-calculating-container {
+    margin: 0;
+    width: 240px;
+    padding-top: 10px;
+  }
+
+  .btn-container {
+    text-align: right;
+  }
+
+  .tip-btn,
+  .active-btn {
+    width: 100px;
+    margin-right: 22px;
+  }
+
+  .tip-custom {
+    width: 95px;
+    margin-right: 23px;
+  }
+
+  .reset-btn {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    height: 40px;
+    width: 200px;
+    font-weight: 900;
+    top: 0;
+  }
+}

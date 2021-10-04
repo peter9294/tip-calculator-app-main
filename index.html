@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | Tip calculator app</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+        margin-top: 20px;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+    </style>
+  </head>
+  <body>
+    <h1>SPLI<br />TTER</h1>
+    <main>
+      <div class="left-top-container">
+        <div class="bill-container">
+          <h2>Bill</h2>
+          <label for="bill-input" class="dollar">
+            <input type="number" class="input-long bill-input" dir="rtl" />
+          </label>
+        </div>
+        <div class="select-tip-container">
+          <h2>Select Tip %</h2>
+          <div class="btn-container">
+            <span class="btn-activable">
+              <button class="tip-btn">5%</button>
+              <button class="tip-btn">10%</button>
+              <button class="tip-btn">15%</button>
+              <button class="tip-btn">25%</button>
+              <button class="tip-btn">50%</button>
+            </span>
+            <input type="number" placeholder="Custom" class="tip-custom" />
+          </div>
+        </div>
+        <div class="no-people-container">
+          <h2 id="no-of-people-header">
+            Number of People<span id="cant-be-zero" style="visibility: hidden">
+              Can't be zero</span
+            >
+          </h2>
+          <label for="people-input" class="person">
+            <input type="number" class="input-long people-input" dir="rtl" />
+          </label>
+        </div>
+      </div>
+
+      <div class="tip-calculating-container">
+        <div class="amount-container">
+          <div class="text">
+            <h2>Tip Amount</h2>
+            <p>/ person</p>
+          </div>
+          <span id="tip-amount">$0.00</span>
+        </div>
+        <div class="amount-container">
+          <div class="text">
+            <h2>Total</h2>
+            <p>/ person</p>
+          </div>
+          <span id="total">$0.00</span>
+        </div>
+        <button class="reset-btn">RESET</button>
+      </div>
+    </main>
+    <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by <a href="https://github.com/peter9294">peter9294</a>.
+    </div>
+    <script src="index.js"></script>
+  </body>
+</html>
