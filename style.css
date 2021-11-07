@@ -263,6 +263,10 @@ input:focus {
     width: 95px;
     margin-right: 23px;
   }
+  
+  .tip-custom:focus {
+    width: 91px;
+  }
 
   .reset-btn {
     margin-top: 20px;
